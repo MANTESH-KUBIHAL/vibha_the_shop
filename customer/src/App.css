@@ -1,0 +1,188 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #111;
+    color: white;
+}
+
+.navbar .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar .center {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    width: 250px;
+}
+
+.navbar button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar .right button {
+    margin-left: 10px;
+}
+
+.accountname-btn1 {
+    background: orange;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+/* ===== CATEGORY BAR ===== */
+.categories {
+    display: flex;
+    gap: 10px;
+    padding: 20px 40px;
+    overflow-x: auto;
+}
+
+.categories button {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.categories button.active {
+    background: #111;
+    color: white;
+}
+
+/* ===== PRODUCT GRID ===== */
+.grid {
+    width: 100%;
+    padding: 30px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card button {
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== CART ===== */
+.cart {
+    padding: 40px;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.continue-btn {
+    margin: 30px 40px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: orange;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== AUTH & ACCOUNT ===== */
+.auth {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth input,
+.auth textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.auth button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== CHECKOUT ===== */
+.checkout {
+    text-align: center;
+    padding: 80px;
+}

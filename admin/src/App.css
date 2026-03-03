@@ -1,0 +1,141 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 240px;
+    background: #111;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: orange;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    flex: 1;
+    padding: 40px;
+    background: #f4f6f9;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===== FORMS ===== */
+.auth {
+    max-width: 500px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth input,
+.auth select,
+.auth textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.auth button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== USERS & ORDERS ===== */
+.orders {
+    display: grid;
+    gap: 15px;
+}
+
+.order-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
