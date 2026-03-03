@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.css'
 import placeholder from './assets/placeholder.png'
 
-const API_BASE = 'http://localhost:8080/api'
+const API_BASE = "https://vibha-the-shop-1.onrender.com/api";
 
 // ================= NAVBAR ================= 
 function Navbar({ onSearch }) {
