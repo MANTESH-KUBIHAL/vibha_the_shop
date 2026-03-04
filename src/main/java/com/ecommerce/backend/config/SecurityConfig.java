@@ -88,9 +88,13 @@ public class SecurityConfig {
         return args -> {
             if (userRepository.findByEmail("admin@gmail.com").isEmpty()) {
                 User admin = new User();
+                admin.setFullName("Admin");
                 admin.setEmail("admin@gmail.com");
                 admin.setPassword(encoder.encode("admin123"));
                 admin.setRole(Role.ADMIN);
+                admin.setAddress("Bangalore");
+                admin.setPhone("9999999999");
+
                 userRepository.save(admin);
                 System.out.println("✅ Admin user created");
             }
