@@ -18,6 +18,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import com.ecommerce.backend.model.User;
+import com.ecommerce.backend.model.Role;
+import com.ecommerce.backend.repository.UserRepository;
+import org.springframework.boot.CommandLineRunner;
 
 import java.util.List;
 
@@ -77,5 +81,19 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
+    }
+
+    @Bean
+    public CommandLineRunner init(UserRepository userRepository, PasswordEncoder encoder) {
+        return args -> {
+            if (userRepository.findByEmail("admin@gmail.com").isEmpty()) {
+                User admin = new User();
+                admin.setEmail("admin@gmail.com");
+                admin.setPassword(encoder.encode("admin123"));
+                admin.setRole(Role.ADMIN);
+                userRepository.save(admin);
+                System.out.println("✅ Admin user created");
+            }
+        };
     }
 }
