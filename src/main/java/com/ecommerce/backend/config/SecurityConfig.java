@@ -64,7 +64,12 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(List.of("*"));
+
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173", // local frontend
+                "https://vibha-the-shop-user.onrender.com",
+                "https://vibha-the-shop-admin.onrender.com"));
+
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
