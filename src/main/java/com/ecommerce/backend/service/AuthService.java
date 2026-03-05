@@ -25,7 +25,7 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 
-    private final JavaMailSender mailSender; // optional if configured
+    private final JavaMailSender mailSender;
 
     @Transactional
     public AuthResponse register(RegisterRequest req) {

@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@ body {
     background: #f4f6f9;
 }
 
-/* ===== NAVBAR ===== */
 .navbar {
     width: 100%;
     display: flex;
@@ -66,7 +64,6 @@ body {
     height: 35px;
 }
 
-/* ===== CATEGORY BAR ===== */
 .categories {
     display: flex;
     gap: 10px;
@@ -87,7 +84,6 @@ body {
     color: white;
 }
 
-/* ===== PRODUCT GRID ===== */
 .grid {
     width: 100%;
     padding: 30px 40px;
@@ -122,7 +118,6 @@ body {
     cursor: pointer;
 }
 
-/* ===== CART ===== */
 .cart {
     padding: 40px;
 }
@@ -153,7 +148,6 @@ body {
     cursor: pointer;
 }
 
-/* ===== AUTH & ACCOUNT ===== */
 .auth {
     max-width: 400px;
     margin: 50px auto;
@@ -181,7 +175,6 @@ body {
     cursor: pointer;
 }
 
-/* ===== CHECKOUT ===== */
 .checkout {
     text-align: center;
     padding: 80px;

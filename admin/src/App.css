@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -17,14 +16,12 @@ body {
     background: #f4f6f9;
 }
 
-/* ===== LAYOUT ===== */
 .layout {
     display: flex;
     width: 100%;
     min-height: 100vh;
 }
 
-/* ===== SIDEBAR ===== */
 .sidebar {
     width: 240px;
     background: #111;
@@ -49,14 +46,12 @@ body {
     background: orange;
 }
 
-/* ===== MAIN CONTENT ===== */
 main {
     flex: 1;
     padding: 40px;
     background: #f4f6f9;
 }
 
-/* ===== DASHBOARD ===== */
 .dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -72,7 +67,6 @@ main {
     text-align: center;
 }
 
-/* ===== FORMS ===== */
 .auth {
     max-width: 500px;
     margin-bottom: 40px;
@@ -105,7 +99,6 @@ main {
     gap: 20px;
 }
 
-/* ===== CARD ===== */
 .card {
     background: white;
     padding: 20px;
@@ -128,7 +121,6 @@ main {
     cursor: pointer;
 }
 
-/* ===== USERS & ORDERS ===== */
 .orders {
     display: grid;
     gap: 15px;

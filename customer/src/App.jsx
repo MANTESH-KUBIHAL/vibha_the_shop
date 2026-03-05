@@ -6,7 +6,6 @@ import placeholder from './assets/placeholder.png'
 
 const API_BASE = "https://vibha-the-shop-1.onrender.com/api";
 
-// ================= NAVBAR ================= 
 function Navbar({ onSearch }) {
   const navigate = useNavigate()
   const token = localStorage.getItem('token')
@@ -55,7 +54,6 @@ function Navbar({ onSearch }) {
   )
 }
 
-// ================= HOME =================//
 function Home() {
   const [categories, setCategories] = useState([])
   const [selectedCategory, setSelectedCategory] = useState(null)
@@ -125,7 +123,6 @@ function Home() {
   )
 }
 
-// ================= ADD TO CART =================
 function AddToCartButton({ product }) {
   const navigate = useNavigate()
   const token = localStorage.getItem('token')
@@ -147,7 +144,6 @@ function AddToCartButton({ product }) {
   )
 }
 
-// ================= CART =================
 function Cart() {
   const [items, setItems] = useState([])
   const token = localStorage.getItem('token')
@@ -196,7 +192,6 @@ function Cart() {
   )
 }
 
-// ================= LOGIN =================
 function Login() {
   const navigate = useNavigate()
   const [isRegister, setIsRegister] = useState(false)
@@ -287,7 +282,6 @@ function Login() {
   )
 }
 
-// ================= ACCOUNT =================
 function Account() {
   const token = localStorage.getItem('token')
   const navigate = useNavigate()
@@ -364,7 +358,6 @@ function Account() {
   )
 }
 
-// ================= CHECKOUT =================
 function Checkout() {
   const navigate = useNavigate()
 
@@ -372,8 +365,8 @@ function Checkout() {
     <div>
       <Navbar onSearch={() => { }} />
       <div className="checkout">
-        <h2>You cannot afford this 😅</h2>
-        <p>Apne aukaat ke hisaab se khareed na be.</p>
+        <h2>Oops u can not buy anything of this yet</h2>
+        <p>This will be updated Soon</p>
         <button
           className="continue-btn"
           onClick={() => navigate('/')}
@@ -385,7 +378,6 @@ function Checkout() {
   )
 }
 
-// ================= APP =================
 function App() {
   return (
     <div className="app-container">
