@@ -22,7 +22,6 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Prevent recursion with User
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnoreProperties({ "orders", "password" })
@@ -43,7 +42,6 @@ public class Order {
     @Builder.Default
     private OrderStatus status = OrderStatus.PENDING; // builder.defult added to solve warning
 
-    // Prevent recursion with OrderItem
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnoreProperties("order")
     @Builder.Default
