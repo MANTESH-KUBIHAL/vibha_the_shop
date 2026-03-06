@@ -29,7 +29,11 @@ function Navbar({ onSearch }) {
           type="text"
           placeholder="Search products..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value;
+            setQuery(value);
+            onSearch?.(value);
+          }}
         />
         <button onClick={() => onSearch?.(query)}>Search</button>
       </div>
